@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where to</title>
+    <script>
+        function myFunction() {
+          document.getElementById("laP").innerHTML = ":O se cambio";
+        }
+    </script>
+</head>
+<body>
+    <p id="laP"></p>
+
+    <button type="button" onclick="myFunction()">Cambio</button>
+
+    <button type="button" onclick="funcion2()">Cambio</button>
+    
+    <button type="button" onclick="ultima()">ultima</button>
+    
+    <script>
+        document.getElementById('laP').innerHTML = "Hola Script";
+    </script>
+
+    <script>
+        function funcion2() {
+        document.getElementById("laP").innerHTML = "Se volvio a cambiar";
+        }
+    </script>
+
+    <script src="funcion.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <p>Objeto simple</p>
+    <p id="demo"></p>
+    <p>Objeto</p>
+    <p id="demo1"></p>
+    <p>Obtener la informacion de un objeto</p>
+    <p id="demo2"></p>
+    <p>Funcion en un Objeto</p>
+    <p id="demo3"></p>
+
+    <script>
+        //Objeto simple
+        let carro = "Fiat";
+        document.getElementById("demo").innerHTML = carro;
+
+        //Objeto
+        const miCarro = {type:"Fiat", model:"500", color:"white"}
+        document.getElementById("demo1").innerHTML = "El tipo del carro es "
+        + miCarro.type;
+
+        //Diferentes maneras de obtener informacion
+        const person = {
+        firstName: "John",
+        lastName : "Doe",
+        id     :  5566
+        };
+        document.getElementById("demo2").innerHTML =
+            person["firstName"] + " " + person.lastName;
+
+        //Funciones en Objetos
+        const person1 = {
+            firstName: "John",
+            lastName : "Doe",
+            id       : 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo3").innerHTML = person1.fullName();
+    </script>
+</body>
+</html>

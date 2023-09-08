@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Const</title>
+</head>
+<body>
+    <p>Arreglos const</p>
+    <p id="demo"></p>
+    <p>Modificar un arreglo</p>
+    <p id="demo1"></p>
+    <p>Dentro y afuera de un bloque</p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p>Redeclarar arrglos var</p>
+    <p id="demo4"></p>
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = cars;
+
+        cars[0] = "Toyota";
+        cars.push("Audi");
+        document.getElementById("demo1").innerHTML = cars;
+
+        {
+            const cars = ["Toyota", "Audi", "Fiat"]
+            document.getElementById("demo2").innerHTML = cars
+        }
+        document.getElementById("demo3").innerHTML = cars;
+
+        var carros = ["Toyota", "Audi", "Fiat"];
+        carros = ["Audi", "Fiat"];
+        document.getElementById("demo4").innerHTML = carros;
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades Numeros</title>
+</head>
+<body>
+    <p>EPSILON</p>
+    <p id="demo"></p>
+    <p>Max Value</p>
+    <p id="demo1"></p>
+    <p>Min Value</p>
+    <p id="demo2"></p>
+    <p>Max Safe Integer</p>
+    <p id="demo3"></p>
+    <p>Min Safe Integer</p>
+    <p id="demo4"></p>
+    <p>Positive Infinity</p>
+    <p id="demo5"></p>
+    <p>Negative Infinity</p>
+    <p id="demo6"></p>
+    <p>Not a Number</p>
+    <p id="demo7"></p>
+    <script>
+        let x = Number.EPSILON;
+        document.getElementById("demo").innerHTML = "Epsilon: " + x;
+
+        let a = Number.MAX_VALUE;
+        document.getElementById("demo1").innerHTML = "El numero mas grande de JS es: " + a;
+
+        let b = Number.MIN_VALUE;
+        document.getElementById("demo2").innerHTML = "El numero mas pequeño de JS es: " + b;
+
+        let c = Number.MAX_SAFE_INTEGER;
+        document.getElementById("demo3").innerHTML = "El maximo numero seguro es: " + c;
+    
+        let d = Number.MIN_SAFE_INTEGER;
+        document.getElementById("demo4").innerHTML = "El minumo numero seguro es: " + d;
+
+        let e = Number.POSITIVE_INFINITY;
+        document.getElementById("demo5").innerHTML = "Infinito Positivo: " + e;
+
+        let f = Number.NEGATIVE_INFINITY;
+        document.getElementById("demo6").innerHTML = "Infinito Negativo: " + f;
+
+        let g = Number.NaN;
+        document.getElementById("demo7").innerHTML = "Not a Number: " + g;
+    </script>
+</body>
+</html>

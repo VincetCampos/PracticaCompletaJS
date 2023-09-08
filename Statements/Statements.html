@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Statements</title>
+
+</head>
+<body>
+    <p id="demo"></p>
+    <p>JavaScript Statements</p>
+    <p id="hola"></p>
+    <p>El numero once con los semicolons</p>
+    <p id="elonce"></p>
+    <p>Escribiendo Varios texto en JavaScript a la vez</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button onclick="myFunction()">Aqui</button>
+
+    <script>
+        let x, y, z;  // Statement 1
+        x = 5;        // Statement 2
+        y = 6;        // Statement 3
+        z = x + y;    // Statement 4
+
+        document.getElementById("demo").innerHTML =
+        "El valor de z es " + z + ".";  
+
+        document.getElementById("hola").innerHTML = "Hola Mundo.";
+
+        let a, b, c;
+        a = 5;
+        b = 6;
+        c = a + b;
+        document.getElementById("elonce").innerHTML = c;
+
+        function myFunction() {
+            document.getElementById("demo1").innerHTML = "Hello everynya";
+            document.getElementById("demo2").innerHTML = "How are you?, fine thank you";
+        }
+    </script>
+</body>
+</html>

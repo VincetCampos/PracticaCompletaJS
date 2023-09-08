@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Strings</title>
+</head>
+<body>
+    <p>Index of y Last Index Of</p>
+    <p id="demo"></p>
+    <p>Search</p>
+    <p id="demo1"></p>
+    <p>Match</p>
+    <p id="demo2"></p>
+    <p>Match All</p>
+    <p id="demo3"></p>
+    <p>Includes</p>
+    <p id="demo4"></p>
+    <p>starts with y ends wit</p>
+    <p id="demo5"></p>
+    
+    <script>
+        //index Of
+        let text = "Please locate where 'locate' occurs!";
+        let index = text.indexOf("locate");
+        //last index of
+        let index1 = text.lastIndexOf("locate");
+        document.getElementById("demo").innerHTML = 
+        text + "<br>index Of: " + index +
+        "<br>last index of: " + index1;
+        //Search
+        let buscar = text.search("locate");
+        document.getElementById("demo1").innerHTML = buscar;
+        //match
+        const match = text.match("ate");
+        document.getElementById("demo2").innerHTML = "Match simple: " + match.length + " "+ match;
+        //match all
+        let text1 = "I love cats. Cats are very easy to love. Cats are very popular."
+        const iterator = text1.matchAll("Cats");
+        document.getElementById("demo3").innerHTML = Array.from(iterator);
+        //includes
+        let text2 = "Hello world, welcome to the universe.";
+        document.getElementById("demo4").innerHTML = text2.includes("world");
+        //startsWith
+        let empiezaCon = text2.startsWith("Hello");
+        let terminaCon = text2.endsWith("Hello");
+        document.getElementById("demo5").innerHTML = "StartWith: " + empiezaCon +
+        "<br>EndWith: " + terminaCon;
+    </script>
+</body>
+</html>

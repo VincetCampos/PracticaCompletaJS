@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <h3>Hoisting</h3> 
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        x = 5; // Assign 5 to x
+        elem = document.getElementById("demo"); // Find an element 
+        elem.innerHTML = x;           // Display x in the element
+        var x; // Declare x
+
+        try {
+        carName = "Saab";
+        let carName = "Volvo";
+        }
+        catch(err) {
+        document.getElementById("demo1").innerHTML = err;
+        }
+
+        var x = 5; // Initialize x
+        elem = document.getElementById("demo2"); // Find an element 
+        elem.innerHTML = x + " " + y;       // Display x and y
+        var y = 7; // Initialize y
+    </script>
+</body>
+</html>

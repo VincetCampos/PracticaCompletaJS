@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Of</title>
+</head>
+<body>
+    <h2>Type of de valores</h2>
+    <p id="demo"></p>
+    <h3>Datos primitivos</h3>
+    <p id="demo1"></p>
+    <h3>Datos complejos</h3>
+    <p id="demo2"></p>
+    <h3>Constructor</h3>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <h3>Indefinido</h3>
+    <p id="demo6"></p>
+    <h3>Valores vacios</h3>
+    <p id="demo7"></p>
+    <h3>Valores nulos</h3>
+    <p id="demo8"></p>
+    <h3>instance of Operador</h3>
+    <p id="demo9"></p>
+    <h3>Operador vacio</h3>
+    <a href="javascript:void(0);">Link inutil</a>
+    <br>
+    <a href="javascript:void(document.body.style.backgroundColor='red');">
+        Click para cambiar a rojo
+    </a>
+
+    <h3></h3>
+
+    <script>
+        document.getElementById("demo").innerHTML = 
+        "'John' es " + typeof "John" + "<br>" +
+        "3.14 es " + typeof 3.14 + "<br>" +
+        "NaN es " + typeof NaN + "<br>" +
+        "false es " + typeof false + "<br>" +
+        "[1, 2, 3, 4] es " + typeof [1, 2, 3, 4] + "<br>" +
+        "{name:'John', age:34} es " + typeof {name:'John', age:34} + "<br>" +
+        "new Date() es " + typeof new Date() + "<br>" +
+        "function () {} es " + typeof function () {} + "<br>" +
+        "miCarro es " + typeof miCarro + "<br>" +
+        "null es " + typeof null;
+
+        document.getElementById("demo1").innerHTML = 
+        "Texto = " + typeof "Texto" +
+        "<br>4.6 = " + typeof 4.6 +
+        "<br>true = " + typeof true +
+        "<br>false = " + typeof false +
+        "<br>x = " + typeof x;
+
+        document.getElementById("demo2").innerHTML =
+        "{nombre:'John', age:34} = " + typeof {nombre:'John', age:34} +
+        "<br>[1,2,3,4] = " + typeof [1,2,3,4] +
+        "<br>null = " + typeof null +
+        "<br>function nuevaFuncion (){} = " + typeof function nuevaFuncion(){};
+
+        document.getElementById("demo4").innerHTML = 
+        "john".constructor + "<br>" +
+        (3.14).constructor + "<br>" +
+        false.constructor + "<br>" +
+        [1,2,3,4].constructor + "<br>" +
+        {name:'john', age:34}.constructor + "<br>" +
+        new Date().constructor + "<br>" +
+        function () {}.constructor;
+
+        const fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo5").innerHTML = isArray(fruits);
+        function isArray(myArray) {
+        return myArray.constructor === Array;
+        }
+
+        let car;
+        let vacio = "";
+        document.getElementById("demo6").innerHTML = typeof car;
+
+        document.getElementById("demo7").innerHTML = typeof vacio;
+
+        let person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+        person = null;
+        document.getElementById("demo8").innerHTML = typeof person;
+
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo9").innerHTML =
+        (cars instanceof Array) + "<br>" + 
+        (cars instanceof Object) + "<br>" +
+        (cars instanceof String) + "<br>" +
+        (cars instanceof Number);
+    </script>
+</body>
+</html>

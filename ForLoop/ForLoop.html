@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <h2>For Loop</h2>
+    <p id="demo"></p>
+    <h3>Se pueden inicializar varias variables</h3>
+    <p id="demo1"></p>
+    <h3>Loop Scope</h3>
+    <p id="demo2"></p>
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let texto = "";
+        for (let i = 0; i < 6; i++) {
+            texto += cars[i] + "<br>";
+        }
+        document.getElementById("demo").innerHTML = texto;
+
+        const carros = ["BMW", "Volvo", "Saab", "Ford"];
+        let i, len, text;
+        for (i = 0, len = carros.length, text = ""; i < len; i++) {
+        text += carros[i] + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text;
+
+        var v = 5;
+        let w = 5;
+
+        for(var v = 0; v < 10; v++){
+            //nada
+        }
+        for(let w = 0; w < 10; w++){
+            //nada XD
+        }
+        document.getElementById("demo2").innerHTML = "Var v " + v + " vrs " + "Let w " + w;
+    </script>
+</body>
+</html>

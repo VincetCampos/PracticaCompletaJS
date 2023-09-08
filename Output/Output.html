@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElOutput</title>
+</head>
+<body>
+    <h1>El Ejemplo del Output</h1>
+    <p id="demo"></p>
+
+    <button onclick="document.write('texto fantasma')">Boo</button>
+    <button onclick="window.print()">Imprime</button>
+
+    <script>
+        document.getElementById("demo").innerHTML = 5 + 6;
+        window.alert('La alerta');
+        console.log('Solo para debuggind');
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict</title>
+</head>
+<body>
+    <h2>Con "use strict":</h2>
+    <h3>El uso de una variable sin asignar no es permitido.</h3>
+    <p>Activar el debuggind del navegador (F12) para ver el error.</p>
+
+    <script>
+        "use strict";
+        x = 3.14;  // This will cause an error (x is not defined).
+
+        /*x = 3.14;    // This will not cause an error.
+        myFunction();
+        function myFunction() {
+        "use strict";
+        y = 3.14;  // This will cause an error (y is not defined).
+        }*/
+        /*"use strict"
+        x = {p1: 10, p2: 52}*/
+        
+        /*"use strict";
+        let x = 3.14;
+        delete x;*/
+        /*
+            "use strict";
+            function x(p1, p2) {};
+            delete x;    
+
+            "use strict";
+            function x(p1, p1) {};
+
+            "use strict";
+            let x = 010;  
+
+            "use strict";
+            let x = "\010";
+
+            "use strict";
+            const obj = {};
+            Object.defineProperty(obj, "x", {value:0, writable:false});
+
+            obj.x = 3.14;   // This will cause an error
+
+            "use strict";
+            const obj = {};
+            Object.defineProperty(obj, "x", {value:0, writable:false});
+
+            obj.x = 3.14;  
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterables</title>
+</head>
+<body>
+    <h2>Iteradores</h2>
+    <h3>For Of Loop</h3>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        const nombre = "Hola mundo";
+        let texto = "";
+        for (const x of nombre) {
+            texto += x + "<br>";
+        }
+        document.getElementById("demo").innerHTML = texto;
+
+        const letras = ["a", "b", "c"];
+        let abc = "";
+        for(const x of letras){
+            abc += x;
+        }
+        document.getElementById("demo1").innerHTML = abc;
+
+        const letters = new Set(["a","b","c"]);
+        let abece = "";
+        for (const x of letters) {
+        abece += x + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = abece;
+
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+        let frutas = "";
+        for (const x of fruits) {
+            frutas += x + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = frutas;
+    </script>
+</body>
+</html>

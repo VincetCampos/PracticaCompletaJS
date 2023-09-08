@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break y Continue</title>
+</head>
+<body>
+    <h2>Break y Continue</h2>
+    <p id="demo"></p>
+    <h3>Continue</h3>
+    <p id="demo1"></p>
+    <h3>Labels</h3>
+    <p id="demo2"></p>
+    <script>
+        let text = "";
+        for (let i = 0; i < 10; i++) {
+            if (i === 3) { break; }
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+
+        let otroTexto = "";
+        for (let i = 0; i < 10; i++) {
+        if (i === 3) { continue; }
+        otroTexto += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = otroTexto;
+
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let listaCarros = "";
+        list: {
+            listaCarros += cars[0] + "<br>"; 
+            listaCarros += cars[1] + "<br>"; 
+            break list;
+            listaCarros += cars[2] + "<br>"; 
+            listaCarros += cars[3] + "<br>"; 
+        }
+        document.getElementById("demo2").innerHTML = listaCarros;
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <p>Formas de crear un String</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p>Tamaño de un String</p>
+    <p id="demo2"></p>
+    <p>Uso de comillas en los textos</p>
+    <p id="demo3"></p>
+    <p>Comparacion de un String primitivo y uno de un Objeto</p>
+    <p id="demo4"></p>
+    <script>
+        let text = "Hola Mundo"
+        let text1 = 'Hola Mundo 2'
+        //No declarar Strings siendo objetos
+        let text3 = new String("Hola Mundo");
+        let tamanio = text.length;
+        let text2 = "Somos llamados los \"Vikingos\" del norte"
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("demo1").innerHTML = text1;
+        document.getElementById("demo2").innerHTML = tamanio;
+        document.getElementById("demo3").innerHTML = text2;
+        document.getElementById("demo4").innerHTML = text === text3;
+</script>
+</body>
+</html>

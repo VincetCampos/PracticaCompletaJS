@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+</head>
+<body>
+    <p>Arreglo de carros</p>
+    <p id="demo"></p>
+    <p>Arreglo de Mascotas</p>
+    <p id="demo1"></p>
+    <p>Arreglo de cosas</p>
+    <p id="demo2"></p>
+    <p>Acceder al arreglo</p>
+    <p id="demo3"></p>
+    <p>Cambiar el arreglo</p>
+    <p id="demo4"></p>
+    <p>Array to String</p>
+    <p id="demo5"></p>
+    <p>Array son objetos</p>
+    <p id="demo6"></p>
+    <p>Metodo length</p>
+    <p id="demo7"></p>
+    <p>Recorrer un array</p>
+    <p id="demo8"></p>
+    <p>Añadir elementos en arreglos con push</p>
+    <p id="demo9"></p>
+    <p>Es un Arreglo?</p>
+    <p id="demo10"></p>
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = cars;
+
+        const mascotas = [
+            "Perro",
+            "Gato",
+            "Hamster"
+        ]
+        mascotas[3] = "Perico";
+        document.getElementById("demo1").innerHTML = mascotas;
+
+        const cosas = new Array("Cosa1", "Numero2", "ElTres")
+        document.getElementById("demo2").innerHTML = cosas;
+
+        let perro = mascotas[0];
+        document.getElementById("demo3").innerHTML = perro;
+
+        cosas[0] = "ahora es 0";
+        document.getElementById("demo4").innerHTML = cosas;
+
+        document.getElementById("demo5").innerHTML = cars.toString();
+
+        const info = ["John","Bonachon",30];
+        const infoP = {nombre: "John", apellido: "Bonachon", edad: 30};
+        document.getElementById("demo6").innerHTML = info[1] + " es igual a: " + infoP.apellido;
+
+        document.getElementById("demo7").innerHTML = mascotas.length;
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo8").innerHTML = text;
+
+        cosas.push("La cosa numero 4");
+        document.getElementById("demo9").innerHTML = cosas;
+
+        document.getElementById("demo10").innerHTML = Array.isArray(cosas);
+    </script>
+
+</body>
+</html>

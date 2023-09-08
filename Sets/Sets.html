@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+</head>
+<body>
+    <h2>Set</h2>
+    <p id="demo"></p>
+    <h3>Add al set</h3>
+    <p id="demo1"></p>
+    <h3>for each en un set</h3>
+    <p id="demo2"></p>
+    <h3>set values</h3>
+    <p id="demo3"></p>
+    <script>
+        const letters = new Set(["a","b","c"]);
+        document.getElementById("demo").innerHTML = letters.size;
+
+        let f = "f"
+        letters.add("d");
+        letters.add("d");
+        letters.add("d");
+        letters.add("e");
+        letters.add(f);
+        document.getElementById("demo1").innerHTML = letters.size;
+
+        let texto = "";
+        letters.forEach (function(value) {
+            texto += value + "<br>";
+        })
+        document.getElementById("demo2").innerHTML = texto;
+
+        let valores = "";
+        for (const x of letters.values()) {
+            valores += x + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = valores;
+    </script>
+</body>
+</html>

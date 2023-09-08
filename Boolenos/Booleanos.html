@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleanos</title>
+</head>
+<body>
+    <h2>Booleanos</h2>
+    <p id="demo"></p>
+    <p>Todo con un valor es true</p>
+    <p id="demo1"></p>
+    <p>Todo sin valor es false</p>
+    <p id="demo2"></p>
+    <p>Tipo de booleanos</p>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo").innerHTML = Boolean(10 < 8)
+        + "<br>" + (8 > 2);
+        document.getElementById("demo1").innerHTML = 
+        "Los numeros (excepto el 0) son: " + Boolean(10) +
+        "<br>Todos los strings (no vacio) son: " + Boolean("false");
+        let x = 0;
+        document.getElementById("demo2").innerHTML = 
+        "El valor de x es: " + Boolean(x);
+
+        let falso = false;
+        let objFalso = new Boolean(false);
+        document.getElementById("demo3").innerHTML = 
+        "Tipo del booleano: " + typeof falso +
+        "<br>El tipo de un objeto booleano: " + typeof objFalso +
+        "<br>Son iguales? " + (falso == objFalso) +
+        "<br>Son iguales? " + (falso === objFalso);
+
+    </script>
+</body>
+</html>

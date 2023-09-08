@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparaciones y operadores logicos</title>
+</head>
+<body>
+    <h2>Simbolos operadores</h2>
+    <p id="demo"></p>
+    <p>Uso de Comparadores</p>
+    <p id="demo1"></p>
+    <p>Operadores Logicos</p>
+    <p id="demo2"></p>
+    <p>Ternary Operator</p>
+    <p>ingrese su edad y presione el boton</p>
+    <input id="age" value="18" />
+    <button onclick="myFunction()">click</button>
+    <p id="demo3"></p>
+    <p>Nullis Coalescing Operator</p>
+    <p id="demo4"></p>
+    <p>El operador ?</p>
+    <p>El nombre del carro es:</p>
+    <p id="demo5"></p>
+
+    <script>
+        x = 5;
+        document.getElementById("demo").innerHTML = "x es igual a 5? " + (x == 5) +
+        "<br>x es igual a 5 en valor y tipo? " + (x === "5") + 
+        "<br>x no es igual a 5? " + (x != 5) +
+        "<br>x no es igual a 5 en valor y tipo? " + (x !== "5") + 
+        "<br>x es mayor a 8? " + (x > 8) +
+        "<br>x es menor a 8? " + (x < 8) +
+        "<br>x es mayor o igual a 8? " + (x >= 8) +
+        "<br>x es menor o igual a 8? " + (x <= 8);
+
+        let texto = "x es menor a 18";
+        if (x < 18){document.getElementById("demo1").innerHTML = texto}
+
+        let a = 6, b = 9;
+        document.getElementById("demo2").innerHTML = 
+        "a = 6 y b = 9" +
+        "<br>a es menor a 10 y b es mayor a 6 " + (a < 10 && b > 6) +
+        "<br>a es menor a 10 y b es menor a 3 " + (a < 10 && b < 3) +
+        "<br>a es mayor a 7 y b es mayor a 8 " + (a > 7 || b > 8) +
+        "<br>a es mayor a 8 y b es menor a 7 " + (a > 8 || b < 7) +
+        "<br>a no es mayor a b " + !(a > b);
+
+        function myFunction() {
+            let age = document.getElementById("age").value;
+            let voteable = (age < 18) ? "Muy joven":"Suficiente";
+            document.getElementById("demo3").innerHTML = voteable + " para votar.";
+        }
+
+        let name = null;
+        let text = "faltante";
+        let result = name ?? text;
+        document.getElementById("demo4").innerHTML = "El nombre es " + result;
+
+        const car = {type:"Fiat", model:"500", color:"white"};
+        let carName = car?.name;
+        document.getElementById("demo5").innerHTML = carName;
+    </script>
+</body>
+</html>

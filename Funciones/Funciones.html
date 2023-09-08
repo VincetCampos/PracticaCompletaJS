@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <p>Llamar una funcion</p>
+    <p id="demo"></p>
+    <p>Invocar una la funcion</p>
+    <p id="demo1"></p>
+
+    <script>
+        function myFunction(p1, p2) {
+            return p1 * p2;
+        }
+
+        function toCelsius(f) {
+            let num1 = 5;
+            let num2 = 9;
+            return (num1/num2) * (f-32);
+        }
+
+        let result = myFunction(4,3);
+        let value = toCelsius(77);
+        let text = "La temperatura es " + value + " Celsius"
+        document.getElementById("demo1").innerHTML = text;
+        document.getElementById("demo").innerHTML = result;
+    </script>
+</body>
+</html>

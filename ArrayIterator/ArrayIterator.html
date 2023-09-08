@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iteration</title>
+</head>
+<body>
+    <h2>Array Iteration</h2>
+    <p id="demo"></p>
+    <p>Metodo map</p>
+    <p id="demo1"></p>
+    <p>flatMap</p>
+    <p id="demo2"></p>
+    <p>filter</p>
+    <p id="demo3"></p>
+    <p>reduce</p>
+    <p id="demo4"></p>
+    <p>reduceRight</p>
+    <p id="demo5"></p>
+    <p>every</p>
+    <p id="demo6"></p>
+    <p>some</p>
+    <p id="demo7"></p>
+    <p>index of y last index of</p>
+    <p id="demo8"></p>
+    <p>find y find Index</p>
+    <p id="demo9"></p>
+    <p>Metodo from</p>
+    <p id="demo10"></p>
+    <p>Keys</p>
+    <p id="demo11"></p>
+    <p>entries</p>
+    <p id="demo12"></p>
+    <p>includes</p>
+    <p id="demo13"></p>
+    <p>El operador "..."</p>
+    <p id="demo14"></p>
+
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        numbers.forEach(myFunction);
+        document.getElementById("demo").innerHTML = txt;
+
+        function myFunction(value, index, array) {
+            txt += value + "<br>"; 
+        }
+
+        const numbers1 = [45, 4, 9, 16, 25];
+        const numbers2 = numbers1.map(myFunction2);
+        document.getElementById("demo1").innerHTML = numbers2;
+
+        function myFunction2(value, index, array) {
+            return value * 2;
+        }
+
+        const myArr = [1, 2, 3, 4, 5,6];
+        const newArr = myArr.flatMap((x) => x * 2);
+        document.getElementById("demo2").innerHTML = newArr;
+
+        const mayor18 = numbers.filter(funcionMayor18);
+        function funcionMayor18(value, index, array){
+            return value > 18;
+        }
+        document.getElementById("demo3").innerHTML = mayor18;
+
+        let suma = numbers.reduce(reduceSuma);
+        function reduceSuma(total, value, index, array){
+            return total + value;
+        }
+        document.getElementById("demo4").innerHTML = suma;
+
+        let sumaRight = numbers.reduceRight(reducirRight);
+        function reducirRight(total, value, index, array){
+            return total + value;
+        }
+        document.getElementById("demo5").innerHTML = sumaRight;
+
+        let menora25 = numbers.every(menor25);
+        function menor25(value, index, array){
+            return value < 25; 
+        }
+        document.getElementById("demo6").innerHTML = "Todos son menor a 25? " + menora25;
+
+        let mayor25 = numbers.some(mayorA25);
+        function mayorA25(value, index, array){
+            return value > 25;
+        }
+        document.getElementById("demo7").innerHTML = "Hay valores mayores a 25? " + mayor25;
+
+        const fruits = ["Apple", "Orange", "Apple", "Mango"];
+        let position = fruits.indexOf("Apple") + 1;
+        let lastPosition = fruits.lastIndexOf("Apple") + 1;
+        document.getElementById("demo8").innerHTML = "La primera posicion de Apple esta en: " + position +
+        "la ultima posicion de Apple esta en: " + lastPosition;
+
+        let first = numbers.find(encontrar);
+        let primerIndex = numbers.findIndex(encontrar);
+        function encontrar(value, index, array){
+            return value > 18;
+        }
+        document.getElementById("demo9").innerHTML = "El primer valor mayor a 18: " + first +
+        " Se encuentra en: " + primerIndex;
+
+        const miArreglo = Array.from("ABCDEF");
+        document.getElementById("demo10").innerHTML = miArreglo;
+
+        const keys = fruits.keys();
+        let texto = "";
+        for (let x of keys){
+            texto += x + "<br>"
+        }
+        document.getElementById("demo11").innerHTML = texto;
+
+        const f = fruits.entries();
+        for(let x of f){
+            document.getElementById("demo12").innerHTML += x + "<br>"
+        }
+
+        let contiene = fruits.includes("Mango");
+        document.getElementById("demo13").innerHTML = "Contiene mango?: " + contiene;
+
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const q4 = ["Oct", "Nov", "May"];
+
+        const year = [...q1, ...q2, ...q3, ...q4];
+        document.getElementById("demo14").innerHTML = year; 
+    </script>
+</body>
+</html>

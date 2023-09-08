@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Este mero</title>
+</head>
+<body>
+    <h3>Palabra clave this</h3>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button onclick="this.style.display='none'">Click to Remove Me!</button>
+    <p id="demo3"></p>
+
+
+    <script>
+        // Create an object:
+        const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName : function() {
+            return this.firstName + " " + this.lastName;
+        }
+        };
+        // Display data from the object:
+        document.getElementById("demo").innerHTML = person.fullName();
+
+        let x = this;
+        document.getElementById("demo1").innerHTML = x;
+
+        document.getElementById("demo2").innerHTML = laFuncion();
+        function laFuncion() {
+        return this;
+        }
+
+        const personaDos = {
+        firstName  : "John",
+        lastName   : "Doe",
+        id     : 5566,
+        myFunction : function() {
+            return this;
+        }
+        };
+        // Display data from the object:
+        document.getElementById("demo3").innerHTML = personaDos.myFunction();
+    </script>
+</body>
+</html>

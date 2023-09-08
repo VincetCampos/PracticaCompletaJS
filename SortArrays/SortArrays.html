@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Arrays</title>
+</head>
+<body>
+    <h2>Ordenar Arrays</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <button onclick="myFunction()">Fisher Yates</button>
+    <!--<p id="demo6"></p>-->
+    <!--<p id="demo7"></p>-->
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <script>
+        const frutas = ["Naranja", "Fresa", "Durazno", "Mango"]
+        frutas.sort();
+        document.getElementById("demo").innerHTML = frutas;
+        frutas.reverse();
+        document.getElementById("demo1").innerHTML = frutas;
+        const points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo2").innerHTML = "No sort en numeros: " + points.sort(); 
+        points.sort(function(a,b){return a - b});
+        document.getElementById("demo3").innerHTML = "Sort de numeros: " + points;
+        points.sort(function(){return 0.5 - Math.random()})
+        document.getElementById("demo4").innerHTML = "Ordenando de forma Aleatoria: " + points;
+        const points2 = [61,82,83,44,56,85];
+        document.getElementById("demo5").innerHTML = points2;
+        function myFunction() {
+        for (let i = points2.length -1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i+1));
+            let k = points2[i];
+            points2[i] = points2[j];
+            points2[j] = k;
+        }
+        document.getElementById("demo6").innerHTML = "Metodo de Fisher Yates: " + points2;
+        }
+        /*points.sort(function(a,b){a - b})
+        document.getElementById("demo7").innerHTML = "Orden Ascedente: " + points[0];
+        points.sort(function(a, b){return b - a});
+        document.getElementById("demo8").innerHTML = "Orden Descendente: " + points[0];*/
+        document.getElementById("demo9").innerHTML = "Math.max: " + myArrayMax(points);
+        document.getElementById("demo10").innerHTML = "Math.min: " + myArrayMin(points);
+        function myArrayMax(arr) {
+            return Math.max.apply(null, arr);
+        }
+        function myArrayMin(arr) {
+            return Math.min.apply(null, arr);
+        }
+        const cars = [
+            {type:"Volvo", year:2016},
+            {type:"Saab", year:2001},
+            {type:"BMW", year:2010}
+            ];
+
+            displayCars();
+
+            cars.sort(function(a, b){return a.year - b.year});
+            displayCars();
+
+            function displayCars() {
+            document.getElementById("demo11").innerHTML =
+            cars[0].type + " " + cars[0].year + "<br>" +
+            cars[1].type + " " + cars[1].year + "<br>" +
+            cars[2].type + " " + cars[2].year;
+        }
+    </script>
+</body>
+</html>

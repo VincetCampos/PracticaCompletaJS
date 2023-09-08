@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <h2>Scope</h2>
+    <p id="demo"></p>
+    <h3>Funcion local</h3>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <h3>Variable Global</h3>
+    <p id="demo3"></p>
+    <p id="demo4"></p> 
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+
+    <script>
+        const mesaje = document.getElementById("demo")
+        {
+            let x = 2;
+        }
+        try {
+            mesaje.innerHTML = x;
+        } catch (error) {
+            mesaje.innerHTML = "No se encontro x";
+        }
+
+        myFunction();
+        function myFunction() {
+        let carName = "Volvo";
+        document.getElementById("demo1").innerHTML = typeof carName + " " + carName;
+        }
+        document.getElementById("demo2").innerHTML = typeof carName;
+
+        let nombreCarro = "Volvo";
+        otraFunction();
+        function otraFunction() {
+            document.getElementById("demo3").innerHTML = "Puedo mostrar " + nombreCarro;
+        }
+
+        yoTambien();
+        // code here can use carName as a global variable
+        document.getElementById("demo4").innerHTML = "Yo tambien puedo " + carName;
+        function yoTambien() {
+        carName = "Volvo";
+        }
+
+        var otroNombre = "Volvo";
+        // code here can use window.carName
+        document.getElementById("demo5").innerHTML = "I can display " + window.otroNombre;
+
+        let tercerNombre = "Volvo";
+        // code here can not use window.carName
+        document.getElementById("demo6").innerHTML = "I can not display " + window.tercerNombre;
+    </script>
+</body>
+</html> 

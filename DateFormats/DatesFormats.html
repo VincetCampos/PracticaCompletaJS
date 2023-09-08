@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatos de fechas</title>
+</head>
+<body>
+    <p>Formatos de fechas</p>
+    <p id="demo"></p>
+    <script>
+        const d = new Date("2015-03-25");
+        const d1 = new Date("2015-03");
+        const d2 = new Date("2015");
+        const d3 = new Date("2015-03-25T12:00:00Z")
+        const d4 = new Date("03/25/2015");
+        const d5 = new Date("14 Sep 2018")
+        let msec = Date.parse("March 21, 2012");
+        const d6 = new Date(msec);
+        document.getElementById("demo").innerHTML = d + "<br>" + d1 + "<br>" + d2 +
+        "<br>" + d3 + "<br>" + d4 + "<br>" + d5 + "<br>Milisegundos de la fecha: " + msec
+        + "<br>" + d6;
+    </script>
+</body>
+</html>

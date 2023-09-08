@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Strings</title>
+</head>
+<body>
+    <p>Tamaño</p>
+    <p id="demo"></p>
+    <p>Slice</p>
+    <p id="demo1"></p>
+    <p>SubString</p>
+    <p id="demo2"></p>
+    <p>SubStr</p>
+    <p id="demo3"></p>
+    <p>Replace</p>
+    <p id="demo4"></p>
+    <p>UpperCase</p>
+    <p id="demo5"></p>
+    <p>LowerCase</p>
+    <p id="demo6"></p>
+    <p>Concat</p>
+    <p id="demo7"></p>
+    <p>Trim</p>
+    <p id="demo8"></p>
+    <p>Padded</p>
+    <p id="demo9"></p>
+    <p>CharAt</p>
+    <p id="demo10"></p>
+    <p>Split</p>
+    <p id="demo11"></p>
+    <script>
+        //Medir un String
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = text.length;
+        document.getElementById("demo").innerHTML = length;
+        let text1 = "Apple, Banana, Kiwi";
+        /*let part = text1.slice(7, 13);
+        let part1 = text1.slice(7);
+        let part2 = text1.slice(-12);*/
+        //Slice
+        let part3 = text1.slice(15, 19)
+        document.getElementById("demo1").innerHTML = part3;
+        //SubString
+        let part = text1.substring(0, 5);
+        document.getElementById("demo2").innerHTML = part;
+        //SubStr
+        let part1 = text1.substr(7, 6);
+        document.getElementById("demo3").innerHTML = part1;
+        //Replace
+        let newText1 = text1.replace("Banana", "Peach");
+        document.getElementById("demo4").innerHTML = newText1;
+        //Upper and Lower Case
+        let text2 = "Hello World!";
+        let mayusText = text2.toUpperCase();
+        let minusText = mayusText.toLowerCase();
+        document.getElementById("demo5").innerHTML = mayusText;
+        document.getElementById("demo6").innerHTML = minusText;
+        //Concat
+        let text3 = "Hola";
+        let text4 = "Mundo";
+        let concatenar = text3.concat(" ", text4);
+        document.getElementById("demo7").innerHTML = concatenar;
+        //Trim
+        let text5 = "        A      ";
+        let noEspacios = text5.trim();
+        let noEspaciosInicial = text5.trimStart();
+        let noEspaciosFinal = text5.trimEnd();
+        document.getElementById("demo8").innerHTML = "Tamaño original: " + text5.length 
+        + "<br>No espacios: " + noEspacios.length 
+        + "<br>No espacios iniciales: " + noEspaciosInicial.length
+        + "<br>No espacios finales: " + noEspaciosFinal.length;
+        //padded
+        let text6 = "5"
+        let padded = text6.padStart(4,"0");
+        let paddenFinal = text6.padEnd(4, "x")
+        document.getElementById("demo9").innerHTML = "Padded start: " + padded
+        + "<br>Padded End: " + paddenFinal;
+        //charAt
+        document.getElementById("demo10").innerHTML = "ChatAt: " + text2.charAt(0)
+        + "<br> charCodeAt: " + text2.charCodeAt(0);
+        //Split
+        const array = text1.split(",")
+        document.getElementById("demo11").innerHTML = array[0]
+    </script>
+</body>
+</html>

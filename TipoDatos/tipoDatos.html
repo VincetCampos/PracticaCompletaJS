@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Datos</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <script>
+        // numeros:
+        let length = 16;
+        let weight = 7.5;
+
+        document.getElementById("demo").innerHTML = "numeros " + length + " " + weight;
+        // Strings:
+        let color = "Yellow";
+        let lastName = "Johnson";
+
+        document.getElementById("demo1").innerHTML = "Strings " + color + " " + lastName;
+        // Booleanos
+        let x = true;
+        let y = false;
+        document.getElementById("demo2").innerHTML = "Booleanos " + x + " " + y;
+
+        // Objetos:
+        const person = {firstName:"John", lastName:"Doe"};
+        
+        document.getElementById("demo3").innerHTML = "Persona " + person.firstName + " " + person.lastName;
+        // Arreglo:
+
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo4").innerHTML = "Carros " + cars[1] + " " + cars[0]; 
+
+        // Fecha:
+        const date = new Date("2022-03-25");
+        document.getElementById("demo5").innerHTML = "Fecha " + date;
+
+        let text = "16" + "Volvo";
+        let text1 = 16 + 4 + "Volvo";
+        let text2 = "Volvo" + 5 + 8;
+
+        document.getElementById("demo6").innerHTML = text +" "+ text1 +" "+ text2;
+        //Variables dinamicas
+        let text3 = 4;
+        text3 = "Ahorra soy un texto";
+        document.getElementById("demo7").innerHTML = "Texto dinamico " + text3;
+        //Big int
+        let text4 = BigInt("123456789012345678901234567890");
+        document.getElementById("demo8").innerHTML = "BigInt " + text4
+
+        //type of
+        document.getElementById("demo9").innerHTML = typeof "Hola"
+
+        //Indefinidos y vacios
+        let hola;
+        let adios = "";
+        hola = undefined;
+    </script>
+</body>
+</html>

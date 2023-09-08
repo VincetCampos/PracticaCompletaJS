@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion Flecha</title>
+</head>
+<body>
+    <h2>Funcion Flecha</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    
+    <button id="btn">Click Me!</button>
+    <p id="demo3"></p>
+
+    <script>
+        let myFunction = (a, b) => a * b;
+        document.getElementById("demo").innerHTML = myFunction(4, 5);
+
+        let hello = () => {
+        return "Hello World!";
+        }
+        document.getElementById("demo1").innerHTML = hello();
+
+        let hola = "";
+        hola = (val) => "Hello " + val;
+        document.getElementById("demo2").innerHTML = hola("Universe!");
+
+        let holaNo2 = "";
+        holaNo2 = () => {
+        document.getElementById("demo3").innerHTML += this;
+        }
+        //The window object calls the function:
+        window.addEventListener("load", holaNo2);
+        //A button object calls the function:
+        document.getElementById("btn").addEventListener("click", holaNo2);
+    </script>
+</body>
+</html>

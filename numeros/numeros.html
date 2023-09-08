@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros</title>
+</head>
+<body>
+    <p>Numeros</p>
+    <p id="demo"></p>
+    <p>Se puede utilizar anotacion cientifica</p>
+    <p id="demo1"></p>
+    <p>Los floats no son muy precisos</p>
+    <p id="demo2"></p>
+    <p>Numeros y Strings</p>
+    <p id="demo3"></p>
+    <p>No numeros</p>
+    <p id="demo4"></p>
+    <p>Infinito</p>
+    <p id="demo5"></p>
+    <p>Hexadecimal</p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p>Numeros como objetos</p>
+    <p id="demo8"></p>
+
+    <script>
+        let x = 3.14;
+        let y = 3;
+        document.getElementById("demo").innerHTML = x + "<br>" + y;
+
+        let a = 123e5;
+        let b = 123e-5;
+        document.getElementById("demo1").innerHTML = a + "<br>" + b;
+
+        let c = 0.2 + 0.1;
+        let d = (0.2*10 + 0.1*10) / 10;
+        document.getElementById("demo2").innerHTML = "0.2 + 0.1 = " + c
+        + "<br>0.2 + 0.1 = " + d;
+
+        let e = 10;
+        let f = "20";
+        let h = 20 + e;
+        let g = e + f;
+        let i = "100"/"10";
+        document.getElementById("demo3").innerHTML = g + "<br>" + h
+        + "<br> Operacion de Strings: " + i;
+
+       let j = 100/"Hola";
+       let k = NaN + 2 + "5";
+       document.getElementById("demo4").innerHTML = "No es un numero? " + isNaN(j)
+       + "<br>" + k + "<br>El tipo de NaN es: " + typeof NaN;
+
+       let numero = 2;
+       let txt = "";
+        // Execute until Infinity
+        while (numero != Infinity) {
+            numero = numero * numero;
+            txt = txt + numero + "<br>";
+        }
+        document.getElementById("demo5").innerHTML = txt + "El tipo de infinito es: " + typeof Infinity;
+
+        let hexa = 0xFF;
+        document.getElementById("demo6").innerHTML = "0xFF = " + hexa;
+
+        let numero2 = 32;
+        document.getElementById("demo7").innerHTML =
+        "Decimal 32 = " + "<br><br>" + 
+
+        "Hexadecimal (base 16): " + numero2.toString(16) + "<br>" +
+        "Decimal (base 10): " + numero2.toString(10) + "<br>" +
+        "Binary (base 2): " + numero2.toString(2);
+
+        // x is a number
+        let l = 123;
+        // y is a Number object
+        let m = new Number(123);
+        document.getElementById("demo8").innerHTML = typeof l + "<br>" + typeof m;
+    </script>
+</body>
+</html>

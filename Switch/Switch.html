@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <h2>Switch</h2>
+    <p id="demo1"></p>
+    <h3>Uso de default</h3>
+    <p id="demo"></p>
+    <h3>Compartir Bloques de Codigo</h3>
+    <p id="demo2"></p>
+    <p></p>
+    <script>
+        let tiempo = new Date().getDay()
+        let dia = ""
+        switch (tiempo){
+            case 0:
+                dia = "Domingo";
+                break;
+            case 1:
+                dia = "Lunes";
+                break;
+            case 2:
+                dia = "Martes";
+                break;
+            case 3:
+                dia = "Miercoles";
+                break;
+            case 4:
+                dia = "Jueves";
+                break;
+            case 5:
+                dia = "Viernes";
+                break;
+            case 6:
+                dia = "Sabado";
+        }
+        document.getElementById("demo1").innerHTML = "Hoy es " + dia;
+
+        let horas = new Date().getHours();
+        let comida = "";
+        switch(horas){
+            case 8:
+                comida = "Desayuno";
+                break;
+            case 12:
+                comida = "Almuerzo";
+                break;
+            case 19:
+                comida = "Cena";
+                break;
+            default:
+                comida = "No es tiempo de comida"
+                break;
+        }
+        document.getElementById("demo").innerHTML = comida;
+
+        let text = "";
+        switch (tiempo) {
+        case 4:
+        case 5:
+            text = "Pronto sera Fin de Semana";
+            break;
+        case 0:
+        case 6:
+            text = "Es fin de semana";
+            break;
+        default:
+            text = "Esperando el fin de Semana";
+            break;
+        }
+        document.getElementById("demo2").innerHTML = text;
+
+        let x = "0";
+        switch (x) {
+        case 0:
+            text = "Off";
+            break;
+        case 1:
+            text = "On";
+            break;
+        default:
+            text = "No se encontro";
+        }
+        document.getElementById("demo3").innerHTML = x;
+    </script>
+</body>
+</html>

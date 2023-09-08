@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas</title>
+</head>
+<body>
+    <h2>Mapa</h2>
+    <p id="demo"></p>
+    <h3>Set en Mapa</h3>
+    <p id="demo1"></p>
+    <h3>Delete Mapa</h3>
+    <p id="demo2"></p>
+    <h3>Has en Mapa</h3>
+    <p id="demo3"></p>
+    <h3>for Each de mapa</h3>
+    <p id="demo4"></p>
+    <h3>Entries de mapa</h3>
+    <p id="demo5"></p>
+
+    <script>
+        const fruits = new Map([
+        ["manzanas", 500],
+        ["peras", 300],
+        ["naranjas", 200]
+        ]);
+        document.getElementById("demo").innerHTML = fruits.get("manzanas") + " Size: " + fruits.size;
+
+        fruits.set("Duraznos", 400);
+        fruits.set("Sandias", 600);
+        document.getElementById("demo1").innerHTML = fruits.get("Duraznos") + " Size: " + fruits.size;
+
+        fruits.delete("peras");
+        fruits.delete("manzanas");
+        document.getElementById("demo2").innerHTML = "Size: " + fruits.size;
+
+        document.getElementById("demo3").innerHTML =  "Tiene manzanas? " + fruits.has("manzanas");
+
+        let frutas = "";
+        fruits.forEach (function(value, key) {
+            frutas += key + ' = ' + value + "<br>"
+        })
+        document.getElementById("demo4").innerHTML = frutas;
+
+        let listaFrutas = "";
+        for (const x of fruits.entries()) {
+            listaFrutas += x + "<br>";
+        }
+        document.getElementById("demo5").innerHTML = listaFrutas;
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Numericos</title>
+</head>
+<body>
+    <p>Metodo toString</p>
+    <p id="demo"></p>
+    <p>Metodo toExponential</p>
+    <p id="demo1"></p>
+    <p>Metodo toFixed</p>
+    <p id="demo2"></p>
+    <p>Metodo toPrecision</p>
+    <p id="demo3"></p>
+    <p>Metodo valueOf</p>
+    <p id="demo4"></p>
+    <p>Metodo Number</p>
+    <p id="demo5"></p>
+    <p>Metodo parseInt</p>
+    <p id="demo6"></p>
+    <p>Metodo parseFloat</p>
+    <p id="demo7"></p>
+    <p>Metodo isInteger</p>
+    <p id="demo8"></p>
+    <p>Metodo isSafeInteger</p>
+    <p id="demo9"></p>
+
+    <script>
+        let x = 123;
+        document.getElementById("demo").innerHTML =
+        x.toString() + "<br>" +
+        (123).toString() + "<br>" +
+        (100 + 23).toString();
+
+        let a = 9.656;
+        document.getElementById("demo1").innerHTML =
+        x.toExponential(2) + "<br>" + 
+        x.toExponential(4);
+
+        document.getElementById("demo2").innerHTML =
+        a.toFixed(0) + "<br>" +
+        a.toFixed(2) + "<br>" +
+        a.toFixed(4);
+
+        document.getElementById("demo3").innerHTML = 
+        a.toPrecision(2) + "<br>" +
+        a.toPrecision(6); 
+
+        document.getElementById("demo4").innerHTML = 
+        x.valueOf() + "<br>" +
+        (123).valueOf() + "<br>" +
+        (100 + 23).valueOf();
+
+        document.getElementById("demo5").innerHTML = 
+        Number(true) + "<br>" +
+        Number("10") + "<br>" +
+        Number("10.33") + "<br>" + 
+        Number("John");
+
+        document.getElementById("demo6").innerHTML = 
+        parseInt("-10") + "<br>" +
+        parseInt("10") + "<br>" +
+        parseInt("10.33") + "<br>" +
+        parseInt("10 6") + "<br>" +  
+        parseInt("10 years") + "<br>" +  
+        parseInt("years 10");
+
+        document.getElementById("demo7").innerHTML = 
+        parseFloat("10") + "<br>" +
+        parseFloat("10.33") + "<br>" +
+        parseFloat("10 6") + "<br>" +  
+        parseFloat("10 years") + "<br>" +
+        parseFloat("years 10");
+
+        document.getElementById("demo8").innerHTML =
+        "Es entero? " + Number.isInteger(10) + 
+        "<br>Es entero? " + Number.isInteger(10.5);
+
+        document.getElementById("demo9").innerHTML =
+        "Es un entero seguro? "+Number.isSafeInteger(10) 
+        + "<br>Es un entero seguro? " + Number.isSafeInteger(12345678901234567890);
+    </script>
+</body>
+</html>

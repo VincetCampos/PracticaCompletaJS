@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+</head>
+<body>
+    <h2>Clases</h2>
+    <p id="demo"></p>
+    <h3>Clase con metodo</h3>
+    <p id="demo"></p>
+
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const carro1 = new Car("Ford", 2014);
+        const carro2 = new Car("Audi", 2019);
+
+        document.getElementById("demo").innerHTML =
+        carro1.name + " " + carro2.name;
+
+        class nuevoCarro {
+            constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+            }
+            age() {
+                const date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        const miCarro = new Car("Ford", 2014);
+        document.getElementById("demo1").innerHTML =
+        "My car is " + myCar.age() + " years old.";
+    </script>
+</body>
+</html>

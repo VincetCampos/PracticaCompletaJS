@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Date methods</title>
+</head>
+<body>
+    <p>Set date methods</p>
+    <p>Set full year</p>
+    <p id="demo"></p>
+    <p>Set Month</p>
+    <p id="demo1"></p>
+    <p>Set Date</p>
+    <p id="demo2"></p>
+    <p>Set Hours</p>
+    <p id="demo3"></p>
+    <p>Set Minutes</p>
+    <p id="demo4"></p>
+    <p>Set Seconds</p>
+    <p id="demo5"></p>
+    <p>Comparar fechas</p>
+    <p id="demo6"></p>
+
+    <script>
+        const date = new Date();
+        date.setFullYear(2002);
+        document.getElementById("demo").innerHTML = date;
+        date.setMonth(3);
+        document.getElementById("demo1").innerHTML = date;
+        date.setDate(22);
+        document.getElementById("demo2").innerHTML = date;
+        date.setHours(22);
+        document.getElementById("demo3").innerHTML = date;
+        date.setMinutes(30);
+        document.getElementById("demo4").innerHTML = date;
+        date.setSeconds(12);
+        document.getElementById("demo5").innerHTML = date;
+
+        let text = "";
+        const today = new Date();
+        const someday = new Date();
+        someday.setFullYear(2023, 9, 14);
+
+        if (someday > today) {
+        text = "Hoy es antes de 14 de septiembre de 2023.";
+        } else {
+        text = "Hoy es despues de 14 de septiembre de 2023.";
+        }
+        document.getElementById("demo6").innerHTML = text;
+    </script>
+</body>
+</html>

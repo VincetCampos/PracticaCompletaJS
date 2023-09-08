@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Mistakes</title>
+</head>
+<body>
+    <h2>Errores comunes</h2>
+    <h3>Uso accidental con los asignadores</h3>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <h3>Comparadores</h3>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <h3>Confusion con Suma y Concatenacion</h3>
+    <p id="demo4"></p>
+    <h3>Problemas con los flotantes</h3>
+    <p id="demo5"></p>
+    <h3>Romper un String</h3>
+    <p id="demo6"></p>
+    <h3>Punto y Coma mal puesto</h3>
+    <p id="demo7"></p>
+    <h3>Rompiendo un estado de retorno</h3>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <h3>Accediendo al arreglo con indices nombrados</h3>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <h3>Indefenido no es null</h3>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+<script>
+        let x = 0;
+        document.getElementById("demo").innerHTML = "(x == 10) Correcto: " + Boolean(x == 10) +
+        "<br>(x = 10) Incorrecto:" + Boolean(x = 10) +
+        "<br>(x = 0) Incorrecto: " + Boolean(x = 0);
+
+        let numero = 10;
+        let cadena = "10";
+        document.getElementById("demo1").innerHTML = '10 == "10": ' + Boolean(numero == cadena) +
+        '<br>10 === "10: "' + Boolean(numero === cadena);
+
+        let ksksk = 10;
+        switch(ksksk) {
+            case 10: document.getElementById("demo2").innerHTML = "Hello";
+        }
+        switch(ksksk) {
+            case "10": document.getElementById("demo3").innerHTML = "Hello";
+        }
+        
+        let nose = 10;
+        nose = 10 + 5;
+        let otraCosa = 10;
+        otraCosa += "5";
+        document.getElementById("demo4").innerHTML =  nose +
+        "<br>" + otraCosa;
+
+        let ceroUno = 0.1;
+        let ceroDos = 0.2;
+        let sumaTres = ceroDos + ceroUno;
+        document.getElementById("demo5").innerHTML = "0.1 + 0.2: " + sumaTres + 
+        "<br>0.1 + 0.2: " + (ceroUno * 10 + ceroDos * 10)/10;
+
+        document.getElementById("demo6").innerHTML =
+        "Hello World!";
+        /*let texto = "Hello
+        World";*/
+
+        let cinco = 5;
+        if (cinco == 19);
+        {
+            document.getElementById("demo7").innerHTML = "Hello";
+        }
+
+        document.getElementById("demo8").innerHTML = myFunction(55);
+        function myFunction(a) {
+            let power = 10
+                return a * power
+        }
+        document.getElementById("demo9").innerHTML = nuevaFuncion(55);
+        function nuevaFuncion(a) {
+            let
+            power = 10;
+            return 
+            a * power;
+        }
+
+        const person = [];
+        person[0] = "John";
+        person[1] = "Doe";
+        person[2] = 16; 
+        document.getElementById("demo10").innerHTML = person[0] + " " + person.length;
+
+        const personaMala = [];
+        personaMala["firstName"] = "John";
+        personaMala["lastName"] = "Doe";
+        personaMala["age"] = 16;
+        document.getElementById("demo11").innerHTML = personaMala.length + " " + personaMala[0];
+
+        //points = [40, 100, 1, 5, 25, 10,];
+
+        document.getElementById("demo12").innerHTML = typeof myObj === "undefined";
+
+        document.getElementById("demo13").innerHTML = typeof myObj !== "undefined" && myObj !== null;
+
+    </script>
+</body>
+</html>

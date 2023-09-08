@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else</title>
+</head>
+<body>
+    <h2>if else</h2>
+    <p id="demo">Buenas</p>
+    <h3>else</h3>
+    <p id="demo1"></p>
+    <h3>elseif</h3>
+    <p id="demo2"></p>
+
+    <script>
+        let saludo = "";
+        let tiempo = new Date().getHours();
+        if(tiempo < 12){
+            saludo = "buenos dias";
+            document.getElementById("demo").innerHTML = saludo;
+        }
+
+        let segundoSaludo = ""
+        if(tiempo < 18){
+            segundoSaludo = "buenas"
+        }else{
+            segundoSaludo = "Jo jo jo"
+        }
+        document.getElementById("demo1").innerHTML = segundoSaludo;
+
+        if(tiempo < 12){
+            saludo = "Buenos dias";
+        }else if(tiempo < 20){
+            saludo = "Buenas tardes";
+        }else{
+            saludo = "Buenas noches";
+        }
+        document.getElementById("demo2").innerHTML = saludo;
+    </script>
+</body>
+</html>

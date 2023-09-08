@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw, Try and Catch y finally</title>
+</head>
+<body>
+    <h2>Throw, Try and Catch y finally</h2>
+    <p id="demo"></p>
+    <h3>Throw y Finally</h3>
+    <p>Ingrese un numero entre 5 y 10</p>
+    <input id="inputDemo" type="text">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p01"></p>
+    <h3>Error de rango</h3>
+    <p id="demo1"></p>
+    <h3>Error de Referencia</h3>
+    <p id="demo2"></p>
+    <h3>Error de Sintaxis</h3>
+    <p id="demo3"></p>
+    <h3>Error de tipo</h3>
+    <p id="demo4"></p>
+    <h3>URI error</h3>
+    <p id="demo5"></p>
+
+    <script>
+        try {
+        adddlert("Welcome guest!");
+        }
+        catch(err) {
+        document.getElementById("demo").innerHTML = err.message;
+        }
+
+        function myFunction() {
+        const message = document.getElementById("p01");
+        message.innerHTML = "";
+        let x = document.getElementById("inputDemo").value;
+        try { 
+            if(x.trim() == "")  throw "empty";
+            if(isNaN(x)) throw "not a number";
+            x = Number(x);
+            if(x < 5)  throw "too low";
+            if(x > 10)   throw "too high";
+        }
+        catch(err) {
+            message.innerHTML = "Input is " + err;
+        }
+        finally {
+            document.getElementById("inputDemo").value = "";
+        }
+        }
+
+        let num = 1;
+        try {
+        num.toPrecision(500);
+        }
+        catch(err) {
+        document.getElementById("demo1").innerHTML = err.name;
+        }
+
+        let x = 5;
+        try {
+        x = y + 1;
+        }
+        catch(err) {
+        document.getElementById("demo2").innerHTML = err.name;
+        }
+
+        try {
+        eval("alert('Hello)");
+        }
+        catch(err) {
+        document.getElementById("demo3").innerHTML = err.name;
+        }
+
+        try {
+        num.toUpperCase();
+        }
+        catch(err) {
+        document.getElementById("demo4").innerHTML = err.name;
+        }
+
+        try {
+        decodeURI("%%%");
+        }
+        catch(err) {
+        document.getElementById("demo5").innerHTML = err.name;
+        }
+    </script>
+</body>
+</html>

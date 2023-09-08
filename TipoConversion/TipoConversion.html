@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+</head>
+<body>
+    <h2>Tipo de Conversion</h2>
+    <p id="demo"></p>
+    <h3>Unary + Operador</h3>
+    <p id="demo1"></p>
+    <h3>Convertir numeros a strings</h3>
+    <p id="demo2"></p>
+    <h3>Convertir fechas en numeros</h3>
+    <p id="demo3"></p>
+    <h3>Convertir fechas en Strings</h3>
+    <p id="demo4"></p>
+    <h3>Conversion Automatica</h3>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+        Number("35") + "<br>" +
+        Number("") + "<br>" +
+        Number("John") + "<br>";
+
+        let y = "5";
+        let x = + y;
+        document.getElementById("demo1").innerHTML = typeof y + "<br>" + typeof x;
+
+        let texto = String(110);
+        document.getElementById("demo2").innerHTML = texto + 
+        " El tipo: " + typeof texto +
+        "<br>" + String(100 + 80) +
+        "<br>Funciona igual toString: " + (170).toString();
+
+        let fecha = new Date();
+        document.getElementById("demo3").innerHTML = Number(fecha);
+
+        document.getElementById("demo4").innerHTML = String(fecha);
+
+        document.getElementById("demo5").innerHTML = 
+        5 + null +
+        "5" + null +
+        "5" + 2
+        "5" * 2;
+
+        let variable = [1,2,3,4];
+        document.getElementById("demo6").innerHTML = variable;
+    </script>
+</body>
+</html>

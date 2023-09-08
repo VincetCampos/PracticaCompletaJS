@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones Regulares</title>
+</head>
+<body>
+    <h2>Expresiones Regulares</h2>
+    <p id="demo"></p>
+    <h3>replace Expresion</h3>
+    <p id="demo1"></p>
+    <h3>Expresiones Modificadores</h3>
+    <p id="demo2"></p>
+    <h3>Patrones Expresiones</h3>
+    <p id="demo3"></p>
+    <h3>Metacaracteres</h3>
+    <p id="demo4"></p>
+    <h3>Cuantificadores</h3>
+    <p id="demo5"></p>
+    <h3>Usando test()</h3>
+    <p id="p01">The best things in life are free!</p>
+    <p id="demo6"></p>
+    <h3>Usando Exec</h3>
+    <p id="demo7"></p>
+
+    <script>
+        let text = "Visit W3Schools!"; 
+        let n = text.search("W3Schools");
+        let regN = text.search(/w3Schools/i);
+        document.getElementById("demo").innerHTML = "String: " + n +
+        "<br>Expresion: " + regN;
+
+        let cambio = text.replace("W3Schools", "Hola Mundo");
+        let regCambio = text.replace(/w3Schools/i, "Microsoft")
+        document.getElementById("demo1").innerHTML = "String: " + cambio +
+        "<br>Expresion: " + regCambio;
+        
+        let a = "Visit W3Schools";
+        let result1 = a.match(/w3schools/i);
+        let b = "Is this all there is?";
+        let result2 = b.match(/is/g);
+        let c = "\nIs th\nis it?";
+        let result3 = c.match(/^is/m);
+        document.getElementById("demo2").innerHTML = "i: " + result1 +
+        "<br>g: " + result2 + "<br>m: " + result3;
+
+        let result4 = b.match(/[h]/g);
+        let d = "123456789";
+        let result5 = d.match(/[1-4]/g);
+        let e = "re, green, red, green, gren, gr, blue, yellow";
+        let result6 = e.match(/(red|green)/g);
+        document.getElementById("demo3").innerHTML = result4 +
+        "<br>" + result5 + "<br>" + result6;
+
+        let text1 = "Give 100%!"; 
+        let result7 = text1.match(/\d/g);
+        let text2 = "Is this all there is?";
+        let result8 = text2.match(/\s/g);
+        let text3 = "HELLO, LOOK AT YOU!"; 
+        let result9 = text3.search(/\bLO/);
+        let text4 = "Visit W3Schools. Hello World!"; 
+        let result10 = text4.match(/\u0057/g);
+        document.getElementById("demo4").innerHTML = result7 +
+        "<br>" + result8 + "<br>" + result9 + "<br>" + result10;;
+
+        let text5 = "Hellooo World! Hello W3Schools!"; 
+        let result11 = text5.match(/o+/g);
+        let result12 = text5.match(/lo*/g);
+        let text6 = "1, 100 or 1000?";
+        let result13 = text6.match(/10?/g);
+        document.getElementById("demo5").innerHTML = result11 + 
+        "<br>" + result12 + "<br>" + result13;
+
+        let text7 = document.getElementById("p01").innerHTML;
+        const pattern = /e/;
+        document.getElementById("demo6").innerHTML = pattern.test(text7);
+
+        const obj = /e/.exec("The best things in life are free!");
+        document.getElementById("demo7").innerHTML =
+        "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+    </script>
+</body>
+</html>

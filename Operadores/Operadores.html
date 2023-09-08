@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores y Aritmetica</title>
+</head>
+<body>
+    <h1>Operadores y Aritmetica</h1>
+    <h3>suma</h3>
+    <p id="demo"></p>
+    <h3>Resta</h3>
+    <p id="demo4"></p>
+    <h3>multiplicacion</h3>
+    <p id="demo1"></p>
+    <h3>Division</h3>
+    <p id="demo5"></p>
+    <h3>Modulo</h3>
+    <p id="demo6"></p>
+    <h3>Operacion Aritmetica</h3>
+    <p id="demo2"></p>
+    <h3>Operadores de asignacion</h3>
+    <p id="demo3"></p>
+    <h3>Comparadores</h3>
+    <p id="demo7"></p>
+    <h3>Unir strings</h3>
+    <p id="demo8"></p>
+    <h3>Incrementar</h3>
+    <p id="demo9"></p>
+    <h3>Disminuir</h3>
+    <p id="demo10"></p>
+    <h3>Potencia</h3>
+    <p id="demo11"></p>
+
+    <script>
+    //JS Operators y Aritmetica
+        let e, f, g, h, i, j, k, l, m, n;
+        e = 5;
+        f = 2;
+        //suma
+        z = e + f;
+        //multiplicacion
+        g = e * f;
+        //Operacion Aritmetica
+        h = (100 + 50) * f;
+        //Asignacion
+        i = 10;
+        i += e;
+        //Resta
+        j = e - f;
+        //Division
+        k = i / e;
+        //Residuo
+        l = i % f;
+
+        document.getElementById("demo").innerHTML = z;
+        document.getElementById("demo1").innerHTML = g;
+        document.getElementById("demo2").innerHTML = h;
+        document.getElementById("demo3").innerHTML = i;
+        document.getElementById("demo4").innerHTML = j;
+        document.getElementById("demo5").innerHTML = k;
+        document.getElementById("demo6").innerHTML = l;
+
+        //JS Comparadores
+        let text1 = "A";
+        let text2 = "B";
+        let text3 = "Hola ";
+        let text4 = "Mundo" + 5;
+        let result = text1 < text2;
+        document.getElementById("demo7").innerHTML = "A es menor a B?" + result;
+        document.getElementById("demo8").innerHTML = text3 + text4;
+
+        let num1, num2, num3;
+        num1 = 5;
+        num2 = 9;
+        num3 = 4;
+        document.getElementById("demo9").innerHTML = num1 ++;
+        document.getElementById("demo10").innerHTML = num2 --;
+        document.getElementById("demo11").innerHTML = num3 ** 2;
+    </script>
+</body>
+</html>

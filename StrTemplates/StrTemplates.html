@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Templates</title>
+</head>
+<body>
+    <p>Se utiliza los (``) para definir un string</p>
+    <p id="demo"></p>
+    <p>Estas permiten multiples strings</p>
+    <p id="demo1"></p>
+    <p>Se puede remplazar variables en strings y expresiones aritmeticas</p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p>Html Templates</p>
+    <p id="demo4"></p>
+    <script>
+        let text = `Hello world!`;
+        document.getElementById("demo").innerHTML = text;
+        let text1 =
+        `The quick
+        brown fox
+        jumps over
+        the lazy dog`;
+        document.getElementById("demo1").innerHTML = text1;
+
+        let firstName = "John";
+        let lastName = "Doe";
+
+        let saludo = `Bienvenido ${firstName}, ${lastName}!`;        
+
+        document.getElementById("demo2").innerHTML = saludo;
+
+        let price = 10;
+        let VAT = 0.25;
+        let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+        document.getElementById("demo3").innerHTML = total;
+
+        let header = "Templates Literals";
+        let tags = ["template literals", "javascript", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+
+        for (const x of tags) {
+        html += `<li>${x}</li>`;
+        }
+
+        html += `</ul>`;
+        document.getElementById("demo4").innerHTML = html;
+    </script>
+</body>
+</html>

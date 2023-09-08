@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos para obtener la fecha</title>
+</head>
+<body>
+    <p>Metodos para obtener fechas</p>
+    <p>get full year</p>
+    <p id="demo"></p>
+    <p>get Month</p>
+    <p id="demo1"></p>
+    <p>get date</p>
+    <p id="demo2"></p>
+    <p>get hours</p>
+    <p id="demo3"></p>
+    <p>get minutes</p>
+    <p id="demo4"></p>
+    <p>get seconds</p>
+    <p id="demo5"></p>
+    <p>get Milliseconds</p>
+    <p id="demo6"></p>
+    <p>get day</p>
+    <p id="demo7"></p>
+    <p>get time</p>
+    <p id="demo8"></p>
+    <p>date now</p>
+    <p id="demo9"></p>
+    <p>get time zone off set</p>
+    <p id="demo10"></p>
+    <script>
+        const date = new Date("2021-03-25 18:30:54:55");
+        document.getElementById("demo").innerHTML = date.getFullYear();
+        document.getElementById("demo1").innerHTML = date.getMonth();
+        document.getElementById("demo2").innerHTML = date.getDate();
+        document.getElementById("demo3").innerHTML = date.getHours();
+        document.getElementById("demo4").innerHTML = date.getMinutes();
+        document.getElementById("demo5").innerHTML = date.getSeconds();
+        document.getElementById("demo6").innerHTML = date.getMilliseconds();
+        document.getElementById("demo7").innerHTML = date.getDay();
+        document.getElementById("demo8").innerHTML = date.getTime();
+        const minute = 1000*60;
+        const hour = minute *60;
+        const day = hour*24;
+        const year = day*365;
+        let years = Math.round(Date.now()/year);
+        document.getElementById("demo9").innerHTML = years;
+        const nuevaDate = new Date();
+        document.getElementById("demo10").innerHTML = nuevaDate.getTimezoneOffset();
+
+    </script>
+</body>
+</html>

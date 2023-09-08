@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaxis</title>
+</head>
+<body>
+    <!--Se usaran la sintaxis, los comentarios, las variables, let, const-->
+    <!--JS la sintasix-->
+
+    <h1>Sintaxis y Comentarios</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <h3>Operadores y Expresiones</h3>
+    <p id="demo3"></p>
+    <p id="demo2"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <h1>Variables Var y Let</h1>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <h1>Variable Const</h1>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+
+    <script>
+        //JS Syntax
+        // como crear variables:
+        var x;
+        let y;
+
+        // como usar variables:
+        x = 5;
+        y = 6;
+        let z = x + y;
+
+        document.getElementById("demo").innerHTML = 10.50;
+        document.getElementById("demo1").innerHTML = "Hola Mundo";
+
+        //JS Operadores, Expresiones, Palabras Claves, Cometarios
+        let a, b, c, d;
+        a = 1;
+        b = 9;
+        //c = "Doe"
+        d = "Peterson"
+
+        document.getElementById("demo3").innerHTML = (5+6)*10;
+        document.getElementById("demo2").innerHTML = a + b;
+        document.getElementById("demo4").innerHTML = "Hola" + " " + "Mundo"
+        document.getElementById("demo5").innerHTML = d;
+
+        /*
+            Comentarios de 
+            Varias lineas
+        */
+        
+        //Variables var, let y const
+        let person = "John Doe",
+        carName = "Volvo",
+        price = 200;
+        marca = "Yotoya";
+        var marca;
+        document.getElementById("demo6").innerHTML = carName;
+        document.getElementById("demo7").innerHTML = marca;
+
+        //const
+        const numeroDos = 2;
+        const carros = ["saab", "volvo", "BMW"];
+        document.getElementById("demo8").innerHTML = numeroDos;
+        document.getElementById("demo9").innerHTML = carros[1];
+        carros.push("Audi");
+
+    </script>
+</body>
+</html>

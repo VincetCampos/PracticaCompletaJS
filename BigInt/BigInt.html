@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Int</title>
+</head>
+<body>
+    <p>Utilizar BigInt o colocar una n al final</p>
+    <p id="demo"></p>
+    <p>Operaciones con BigInt</p>
+    <p id="demo1"></p>
+    <p>Los BigInt no pueden tener decimales y tampoco se operan con Numer</p>
+    <p id="demo2"></p>
+    <p>BigInt Hex, Octal y Binario</p>´
+    <p id="demo3"></p>
+    <p>Maximo y Minimo numero seguro</p>
+    <p id="demo4"></p>
+    <p>Metodos de Enteros</p>
+    <p id="demo5"></p>
+
+    <script>
+        let x = 123456789012345678901234567890n;
+        let y = BigInt("123456789012345678901234567890");
+        document.getElementById("demo").innerHTML = x + "<br>" + y +
+        "<br> El tipo del big int: " + typeof y;
+
+        let a = 9007199254740995n;
+        let b = 9007199254740995n;
+        let c = a * b;
+        document.getElementById("demo1").innerHTML = c;
+        //No se pueden operar bigint con numer
+        let d = 5n;
+        let e = Number(x) / 2;
+        document.getElementById("demo2").innerHTML = e;
+
+        let hex = 0x20000000000003n;
+        let oct = 0o400000000000000003n;
+        let bin = 0b100000000000000000000000000000000000000000000000000011n;
+        document.getElementById("demo3").innerHTML = hex + "<br>" + oct + "<br>" + bin; 
+
+        let maximo = Number.MAX_SAFE_INTEGER;
+        let minimo = Number.MIN_SAFE_INTEGER;
+        document.getElementById("demo4").innerHTML = "El maximo numero seguro es: " + maximo +
+        "<br>El minimo numero seguro es: " + minimo;
+
+        document.getElementById("demo5").innerHTML = "Es un entero? " + Number.isInteger(10)
+        + "<br>Es un entero? " + Number.isInteger(10.5) + "<br>Es un entero seguro? " + Number.isSafeInteger(10)
+        + "<br>Es un entero seguro " + Number.isSafeInteger(12345678901234567890);
+    </script>
+</body>
+</html>

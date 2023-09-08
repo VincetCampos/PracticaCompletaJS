@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Array</title>
+</head>
+<body>
+    <h2>Metodos de Array</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let size = fruits.length;
+        document.getElementById("demo").innerHTML = "La lista: " + fruits
+        + "<br>El tamaño de frutas es: " + size;
+        let frutasString = fruits.toString();
+        document.getElementById("demo1").innerHTML = "toString(): " + frutasString
+        +"<br>O se puede usar join: " + fruits.join(" - ");
+        let fruta = fruits.pop();
+        document.getElementById("demo2").innerHTML = "Metodo pop: " + fruta
+        + "<br>La lista despues pop: " + fruits;
+        let addFruta = fruits.push("kiwi");
+        document.getElementById("demo3").innerHTML = "Metodo push: " + addFruta +
+        "<br>La lista despues de push: " + fruits;
+        let shiftFruta = fruits.shift();
+        document.getElementById("demo4").innerHTML = "Metodo shift: " + shiftFruta
+        + "<br> La lista fruta despues de Shift: " + fruits;
+        let unshitfFruta = fruits.unshift("Lemon");
+        document.getElementById("demo5").innerHTML = "Metodo unShift: " + unshitfFruta
+        + "<br>La lista fruta despues de Unshift: " + fruits;
+        fruits[2] = "Peach"
+        document.getElementById("demo6").innerHTML = "Cambiar elemento: " + fruits;
+        const fruits2 = ["pera", "sandia", "toronja"];
+        delete fruits2[0];
+        document.getElementById("demo7").innerHTML = "delete: " + fruits2;
+        const concfrutas = fruits2.concat(fruits);
+        document.getElementById("demo8").innerHTML = "Concatenar: " + concfrutas;
+        const myArr = [[1,2],[3,4],[5,6]];
+        const newArr = myArr.flat();
+        document.getElementById("demo9").innerHTML = "Metodo flat: " + newArr;
+        fruits.splice(2,1,"Melon","Apple")
+        document.getElementById("demo10").innerHTML = "Metodo splice: " + fruits;
+        const nuevaFrutas = fruits.slice(2);
+        document.getElementById("demo11").innerHTML = "Metodo slice: " + nuevaFrutas
+        + "<br>Frutas Nuevas: " + fruits;
+    </script>
+</body>
+</html>

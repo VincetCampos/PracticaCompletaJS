@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop while</title>
+</head>
+<body>
+    <h2>While Loop</h2>
+    <p id="demo"></p>
+    <h3>do while</h3>
+    <p id="demo1"></p>
+    <h3>Loop while de un Objeto</h3>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        let i = 0;
+        let texto = "";
+        while (i < 10){
+            texto += "El numero es: " + i + "<br>"
+            i++;
+        }
+        document.getElementById("demo").innerHTML = texto;
+
+        let a = 0;
+        let contador = "";
+        do{
+            contador += "Numero: " + a + "<br>"
+            a++;
+        }
+        while(a < 10);
+        document.getElementById("demo1").innerHTML = contador;
+
+        const carros = ["BMW", "Volvo", "Saab", "Ford"];
+        let masCont = 0;
+        let carroObj = "";
+        for (;carros[masCont];) {
+            carroObj += carros[masCont];
+            masCont++;
+        }
+        document.getElementById("demo3").innerHTML = carroObj;
+
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let cont = 0;
+        let text = "";
+        while (cars[cont]) {
+            text += cars[cont] + "<br>";
+            cont++;
+        }
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+</body>
+</html>

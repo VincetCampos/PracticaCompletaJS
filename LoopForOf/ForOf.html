@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop For Of</title>
+</head>
+<body>
+    <h2>Loop For Of</h2>
+    <p id="demo"></p>
+    <h3>Loop sobre un String</h3>
+    <p id="demo1"></p>
+    <script>
+        const cars = ["BMW", "Volvo", "Mini"];
+        let text = "";
+        for (let x of cars) {
+            text += x;
+        }
+        document.getElementById("demo").innerHTML = text;
+
+        let lenguaje = "JavaScript";
+        let texto = "";
+        for(let x of lenguaje){
+            texto += x + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = texto;
+    </script>
+</body>
+</html>
